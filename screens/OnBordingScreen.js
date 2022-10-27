@@ -5,7 +5,6 @@ import Onboarding from 'react-native-onboarding-swiper';
 const OnBoardingScreen = ({navigation}) => {
   return (
     <Onboarding
-    // we use replace here because we doest want to give user control to use back button to see storyboard
     onSkip={()=>navigation.replace('LoginScreen')}
     onDone={()=>navigation.navigate('LoginScreen')}
     pages={[
