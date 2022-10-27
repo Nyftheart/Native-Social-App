@@ -22,3 +22,5 @@
 
 ### pour run (Iphone 13 ios 16.0)
 - yarn ios
+----------------
+#### Suite a une demande de mon yday j'ai eu l'occation de tester un librairie onboardSceen pour faire une suite de tableau (Fonctionel mais avec une érreur)
