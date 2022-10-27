@@ -20,28 +20,28 @@ const Posts = ({navigation}) => {
         keyExtractor={item => item.id}
         onEndReached={() => console.log('end reached')}
         renderItem={({item}) => (
-          <TouchableOpacity
-            style={{margin: 20}}
-            onPress={() =>
-              navigation.navigate('Post', {
-                id: item.id,
-                image: item.image,
-                content: item.content,
-                title: item.title,
-              })
-            }>
-            <Text>{item.title}</Text>
-            <Image
-              style={{width: 350, height: 300}}
-              source={{
-                uri: item.image,
-              }} // ignorer dans le debug
-              // source={{
-              //   uri: `${item.thumbnail.path}.${item.thumbnail.extension}`,
-              // }}
-            />
-            <Text>{item.content}</Text>
-          </TouchableOpacity>
+          <View>
+            <TouchableOpacity
+              style={{margin: 20}}
+              onPress={() =>
+                navigation.navigate('Post', {
+                  id: item.id,
+                  image: item.image,
+                  content: item.content,
+                  title: item.title,
+                })
+              }>
+              <Text>{item.title}</Text>
+              <Image
+                style={{width: 350, height: 300}}
+                source={{
+                  uri: item.image,
+                }}
+              />
+              <Text>{item.content}</Text>
+            </TouchableOpacity>
+            <Text>{item.Like}</Text>
+          </View>
         )}
       />
     </SafeAreaView>
