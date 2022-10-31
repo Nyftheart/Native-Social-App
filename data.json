@@ -42,6 +42,35 @@
             "content": "Post 3",
             "image": "https://cdn.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej-1280x720.png",
             "Like": 30
+        },
+        {
+            "id": 4,
+            "title": "USER4",
+            "content": "Post 4",
+            "image": "https://cdn.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej-1280x720.png",
+            "Like": 40
+        },
+        {
+            "id": 5,
+            "title": "USER1",
+            "content": "Post 4",
+            "image": "https://cdn.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej-1280x720.png",
+            "Like": 10
+        },
+        {
+            "id": 6,
+            "title": "USER3",
+            "content": "Post 4",
+            "image": "https://cdn.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej-1280x720.png",
+            "Like": 50
+        },
+        {
+            "id": 7,
+            "title": "USER3",
+            "content": "Post 4",
+            "image": "https://cdn.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej-1280x720.png",
+            "Like": 25
         }
+
     ]
 }

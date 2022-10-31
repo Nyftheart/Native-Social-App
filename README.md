@@ -26,7 +26,6 @@
 #### Suite a une demande de mon yday j'ai eu l'occation de tester un librairie onboardSceen pour faire une suite de tableau (Fonctionel mais avec une érreur)
 
 # Todo
-- profile page
 - share
 - firebase
 - keyboard
@@ -36,3 +35,4 @@
 - commentaire
 - disconect
 - creation user
+- profile page
