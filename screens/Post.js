@@ -8,8 +8,8 @@ import {
   TouchableOpacity,
   View,
   TextInput,
-  Keyboard,
-} from 'react-native';
+  Keyboard, Share,
+} from "react-native";
 import data from '../data.json';
 import styled from 'styled-components/native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
@@ -23,6 +23,25 @@ const Post = props => {
           <Text style={{fontWeight: 'bold'}}>Utilisateur:</Text> {item.comment}
         </UserComment>
       );
+    }
+  };
+
+  const onShare = async () => {
+    try {
+      const result = await Share.share({
+        message: 'Ybadges post',
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          // shared with activity type of result.activityType
+        } else {
+          // shared
+        }
+      } else if (result.action === Share.dismissedAction) {
+        // dismissed
+      }
+    } catch (error) {
+      alert(error.message);
     }
   };
 
@@ -46,7 +65,6 @@ const Post = props => {
   const [taskItems, setTaskItems] = useState([]);
 
   const handleAddTask = () => {
-    Keyboard.dismiss();
     setTaskItems([...taskItems, task]);
     setTask(null);
   };
@@ -90,7 +108,7 @@ const Post = props => {
         <TouchableOpacity>
           <FontAwesome5 name={'comments'} solid style={{fontSize: 30}} />
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onShare}>
           <FontAwesome5 name={'share'} solid style={{fontSize: 30}} />
         </TouchableOpacity>
       </UnderItem>

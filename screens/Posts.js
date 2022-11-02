@@ -6,12 +6,12 @@ import {
   FlatList,
   Image,
   SafeAreaView,
-  ScrollView,
+  ScrollView, Share,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
-} from 'react-native';
+} from "react-native";
 import data from '../data.json';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import styled from 'styled-components/native';
@@ -28,6 +28,24 @@ const Posts = ({navigation}) => {
     } else {
       setupdate('red');
       setisliked(true);
+    }
+  };
+  const onShare = async () => {
+    try {
+      const result = await Share.share({
+        message: 'Ybadges post',
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          // shared with activity type of result.activityType
+        } else {
+          // shared
+        }
+      } else if (result.action === Share.dismissedAction) {
+        // dismissed
+      }
+    } catch (error) {
+      alert(error.message);
     }
   };
 
@@ -84,7 +102,7 @@ const Posts = ({navigation}) => {
                 <FontAwesome5 name={'comments'} solid style={{fontSize: 30}} />
               </TouchableOpacity>
               &nbsp;&nbsp;
-              <TouchableOpacity>
+              <TouchableOpacity onPress={onShare}>
                 <FontAwesome5 name={'share'} solid style={{fontSize: 30}} />
               </TouchableOpacity>
             </ItemViniet>
